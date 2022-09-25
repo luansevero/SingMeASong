@@ -27,7 +27,7 @@ function spyAndMock(
 }
 
 describe("POST /recommendations", () => {
-    it("Insert a new recommendation", async () => {
+    it("Should be : Insert a new recommendation", async () => {
         const recommendation = recommendationFactory.__createRecommendation("rightLink");
         const findByName = spyAndMock("findByName", null);
         const create = spyAndMock("create");
@@ -37,7 +37,7 @@ describe("POST /recommendations", () => {
         expect(findByName).toBeCalled();
         expect(create).toBeCalled();
     });
-    it("Inserting a existing recommendation", async () => {
+    it("Should not : Insert a new recommendation", async () => {
         const recommendation = recommendationFactory.__createRecommendationData();
         const findByName = spyAndMock("findByName", recommendation);
         const create = spyAndMock("create");
@@ -51,7 +51,7 @@ describe("POST /recommendations", () => {
 });
 
 describe("POST /recommendations/:id/upvote", () => {
-    it("Giving a valid ID", async () => {
+    it("Should be increase in 1 the recommendation score", async () => {
         const recommendation = recommendationFactory.__createRecommendationData();
         const find = spyAndMock("find", recommendation);
         const updateScore = spyAndMock("updateScore", recommendation);
@@ -62,7 +62,7 @@ describe("POST /recommendations/:id/upvote", () => {
         expect(find).toBeCalled();
         expect(updateScore).toBeCalled();
     });
-    it("Giving a invalid ID", async () => {
+    it("Should not increase the score from id", async () => {
         const recommendation = recommendationFactory.__createRecommendationData();
         const find = spyAndMock("find", null);
         const updateScore = spyAndMock("updateScore", recommendation);
@@ -76,7 +76,7 @@ describe("POST /recommendations/:id/upvote", () => {
 });
 
 describe("POST /recommendations/:id/downvote", () => {
-    it("Givin a valid ID", async () => {
+    it("Should be decrease in 1 the recommendation score", async () => {
         const recommendation = recommendationFactory.__createRecommendationData();
         const find = spyAndMock("find", recommendation);
         const updateScore = spyAndMock("updateScore", recommendation);
@@ -90,7 +90,7 @@ describe("POST /recommendations/:id/downvote", () => {
         expect(remove).not.toBeCalled();
 
     })
-    it("Givin a valid ID && Deleting the recommendation", async () => {
+    it("Should be decrease the score && Deleting the recommendation", async () => {
         const recommendation = recommendationFactory.__createRecommendationData();
         const find = spyAndMock("find", recommendation);
         const updateScore = spyAndMock("updateScore", {
@@ -106,7 +106,7 @@ describe("POST /recommendations/:id/downvote", () => {
         expect(updateScore).toBeCalled();
         expect(remove).toBeCalled();
     })
-    it("Givin a invalid ID", async () => {
+    it("Should not decrease the score from id", async () => {
         const recommendation = recommendationFactory.__createRecommendationData();
         const find = spyAndMock("find", null);
         const updateScore = spyAndMock("updateScore", recommendation);
@@ -118,5 +118,15 @@ describe("POST /recommendations/:id/downvote", () => {
         expect(find).toBeCalled();
         expect(updateScore).not.toBeCalled();
         expect(remove).not.toBeCalled();
+    })
+});
+
+describe("GET /recommendations", () => {
+    it("Should be show the last 10 recommendations", async () => {
+        const getAll = spyAndMock("findAll");
+        const { get } = recommendationService;
+
+        await expect(get()).resolves.not.toThrow();
+        expect(getAll).toBeCalled();
     })
 });
