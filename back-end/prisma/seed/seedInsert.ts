@@ -15,7 +15,8 @@ async function recommendations(){
                 { name :"Ozzy Osbourne - A Thousand Shades ft. Jeff Beck", youtubeLink :"https://www.youtube.com/watch?v=ZNVs-dfFUj0", score : 210},
                 { name :"One Desire - Battlefield of Love", youtubeLink :"https://www.youtube.com/watch?v=_fy7CJTgFe4", score : 121},
                 { name :"One Desire - After You're Gone", youtubeLink :"https://www.youtube.com/watch?v=fquFgJXr48Y", score : 1039},
-                { name :"Blue Sky Theory - For a Friend", youtubeLink :"https://www.youtube.com/watch?v=rWqJmee1nfo", score : 3}
+                { name :"Blue Sky Theory - For a Friend", youtubeLink :"https://www.youtube.com/watch?v=rWqJmee1nfo", score : -5},
+                { name :"Everrest - Blackout", youtubeLink :"https://www.youtube.com/watch?v=I2aXXbsBb5w", score : 3}
             ]
         })
         console.log("(5/6)===All insertings complete===")
