@@ -1,3 +1,5 @@
+import { prisma } from "../../src/database";
+
 function __createMusic(
         youtubeMethod : "rightLink" | "wrongLink"
     ){
@@ -11,6 +13,17 @@ function __createMusic(
     };
 };
 
+async function __getWorstRecommendation(){
+    const recommendation = await prisma.recommendation.findMany({
+        orderBy : { score : "asc"},
+        take : 1
+    })
+    console.log(recommendation[0])
+    console.log(recommendation[0]["id"])
+    return recommendation[0]["id"]
+}
+
 export default {
-    __createMusic
+    __createMusic,
+    __getWorstRecommendation
 }

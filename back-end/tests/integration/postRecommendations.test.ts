@@ -34,6 +34,28 @@ describe("POST /recommendations/:id/upvote", () => {
         const response = await agent.post("/recommendations/0/upvote");
         expect(response.status).toBe(404);
     })
+});
+
+describe("POST /recommendations/:id/downvote", () => {
+    it("Given a correct ID - StatusCode(200 - OK!)", async () => {
+        const response = await agent.post("/recommendations/1/downvote");
+        expect(response.status).toBe(200);
+    })
+    it("Given a incorrect ID - StatusCode(404 - Not found!)", async () => {
+        const response = await agent.post("/recommendations/0/downvote");
+        expect(response.status).toBe(404);
+    })
+    it("Given a correct ID(StatusCode(200 - OK!)) but the ID is deleted(StatusCode(404 - Not found!))", async () => {
+        const id = await recommendationFactory.__getWorstRecommendation();
+        const response = await agent.post(`/recommendations/${id}/downvote`);
+        const deletedResponse = await agent.post(`/recommendations/${id}/downvote`);
+        expect(response.status).toBe(200);
+        expect(deletedResponse.status).toBe(404);
+    })
+})
+
+describe("GET /recommendations", () => {
+    
 })
 
 afterAll( async () => {
