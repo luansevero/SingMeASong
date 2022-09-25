@@ -130,3 +130,21 @@ describe("GET /recommendations", () => {
         expect(getAll).toBeCalled();
     })
 });
+describe("GET /recommendations/:id", () => {
+    it("Should be show the recommendation", async () => {
+        const recommendation = recommendationFactory.__createRecommendationData();
+        const find = spyAndMock("find", recommendation);
+        const { getById } = recommendationService;
+
+        await expect(getById(recommendation["id"])).resolves.not.toThrow();
+        expect(find).toBeCalled();
+    });
+    it("Should not showing the recommendation", async () => {
+        const recommendation = recommendationFactory.__createRecommendationData();
+        const find = spyAndMock("find", null);
+        const { getById } = recommendationService;
+
+        await expect(getById(recommendation["id"])).rejects.toEqual({type: "not_found", message : ""});
+        expect(find).toBeCalled();
+    })
+});
