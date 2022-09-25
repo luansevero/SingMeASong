@@ -14,6 +14,15 @@ function __createRecommendation(
     };
 };
 
+function __createRecommendationData(){
+    const recommendation = __createRecommendation("rightLink");
+    return {
+        ...recommendation,
+        id: 1,
+        score: 5
+    }
+}
+
 async function __getWorstRecommendationId(){
     const recommendation = await prisma.recommendation.findMany({
         orderBy : { score : "asc"},
@@ -40,5 +49,6 @@ export default {
     __createRecommendation,
     __getWorstRecommendationId,
     __getBestRecommendationId,
-    __fillRecommendationTable
+    __fillRecommendationTable,
+    __createRecommendationData
 }
