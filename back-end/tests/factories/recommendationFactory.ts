@@ -1,6 +1,7 @@
 import { prisma } from "../../src/database";
+import seedInsert from "../../prisma/seed/seedInsert";
 
-function __createMusic(
+function __createRecommendation(
         youtubeMethod : "rightLink" | "wrongLink"
     ){
     const youtubeLink = {
@@ -29,10 +30,15 @@ async function __getBestRecommendationId(){
         take : 1
     });
     return recommendation[0]["id"]
+};
+
+async function __fillRecommendationTable(){
+    await seedInsert.recommendations();
 }
 
 export default {
-    __createMusic,
+    __createRecommendation,
     __getWorstRecommendationId,
-    __getBestRecommendationId
+    __getBestRecommendationId,
+    __fillRecommendationTable
 }

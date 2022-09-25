@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">54.54% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>18/33</span>
+                <span class='fraction'>33/33</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">50% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>3/6</span>
+                <span class='fraction'>6/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">55.55% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>5/9</span>
+                <span class='fraction'>9/9</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">53.12% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>17/32</span>
+                <span class='fraction'>32/32</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line medium'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -203,41 +203,41 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
@@ -295,42 +295,42 @@ async function get() {
   return recommendationRepository.findAll();
 }
 &nbsp;
-async function <span class="fstat-no" title="function not covered" >getTop(</span>amount: number) {
-<span class="cstat-no" title="statement not covered" >  return recommendationRepository.getAmountByScore(amount);</span>
+async function getTop(amount: number) {
+  return recommendationRepository.getAmountByScore(amount);
 }
 &nbsp;
-async function <span class="fstat-no" title="function not covered" >getRandom(</span>) {
-  const random = <span class="cstat-no" title="statement not covered" >Math.random();</span>
-  const scoreFilter = <span class="cstat-no" title="statement not covered" >getScoreFilter(random);</span>
+async function getRandom() {
+  const random = Math.random();
+  const scoreFilter = getScoreFilter(random);
 &nbsp;
-  const recommendations = <span class="cstat-no" title="statement not covered" >await getByScore(scoreFilter);</span>
-<span class="cstat-no" title="statement not covered" >  <span class="missing-if-branch" title="if path not taken" >I</span>if (recommendations.length === 0) {</span>
-<span class="cstat-no" title="statement not covered" >    throw notFoundError();</span>
+  const recommendations = await getByScore(scoreFilter);
+  if (recommendations.length === 0) {
+    throw notFoundError();
   }
 &nbsp;
-  const randomIndex = <span class="cstat-no" title="statement not covered" >Math.floor(Math.random() * recommendations.length);</span>
-<span class="cstat-no" title="statement not covered" >  return recommendations[randomIndex];</span>
+  const randomIndex = Math.floor(Math.random() * recommendations.length);
+  return recommendations[randomIndex];
 }
 &nbsp;
-async function <span class="fstat-no" title="function not covered" >getByScore(</span>scoreFilter: "gt" | "lte") {
-  const recommendations = <span class="cstat-no" title="statement not covered" >await recommendationRepository.findAll({</span>
+async function getByScore(scoreFilter: "gt" | "lte") {
+  const recommendations = await recommendationRepository.findAll({
     score: 10,
     scoreFilter,
   });
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  <span class="missing-if-branch" title="if path not taken" >I</span>if (recommendations.length &gt; 0) {</span>
-<span class="cstat-no" title="statement not covered" >    return recommendations;</span>
+  if (recommendations.length &gt; 0) {
+    return recommendations;
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return recommendationRepository.findAll();</span>
+  return recommendationRepository.findAll();
 }
 &nbsp;
-function <span class="fstat-no" title="function not covered" >getScoreFilter(</span>random: number) {
-<span class="cstat-no" title="statement not covered" >  <span class="missing-if-branch" title="if path not taken" >I</span>if (random &lt; 0.7) {</span>
-<span class="cstat-no" title="statement not covered" >    return "gt";</span>
+function getScoreFilter(random: number) {
+  if (random &lt; 0.7) {
+    return "gt";
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return "lte";</span>
+  return "lte";
 }
 &nbsp;
 export const recommendationService = {
@@ -349,7 +349,7 @@ export const recommendationService = {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Sun Sep 25 2022 13:19:35 GMT-0300 (Horário Padrão de Brasília)
+                at Sun Sep 25 2022 13:36:33 GMT-0300 (Horário Padrão de Brasília)
             </div>
         <script src="../../prettify.js"></script>
         <script>

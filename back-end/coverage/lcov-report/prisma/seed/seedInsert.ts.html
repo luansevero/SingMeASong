@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for src/utils/errorUtils.ts</title>
+    <title>Code coverage report for prisma/seed/seedInsert.ts</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../prettify.css" />
     <link rel="stylesheet" href="../../base.css" />
@@ -19,34 +19,34 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../index.html">All files</a> / <a href="index.html">src/utils</a> errorUtils.ts</h1>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">prisma/seed</a> seedInsert.ts</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">85% </span>
+                <span class="strong">77.77% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>17/20</span>
+                <span class='fraction'>7/9</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">60% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>12/20</span>
+                <span class='fraction'>0/0</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">83.33% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>5/6</span>
+                <span class='fraction'>1/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">87.5% </span>
+                <span class="strong">77.77% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>14/16</span>
+                <span class='fraction'>7/9</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line high'></div>
+    <div class='status-line medium'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -95,74 +95,71 @@
 <a name='L30'></a><a href='#L30'>30</a>
 <a name='L31'></a><a href='#L31'>31</a>
 <a name='L32'></a><a href='#L32'>32</a>
-<a name='L33'></a><a href='#L33'>33</a>
-<a name='L34'></a><a href='#L34'>34</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L33'></a><a href='#L33'>33</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">type AppErrorTypes = "conflict" | "not_found" | "unauthorized" | "wrong_schema";
-export interface AppError {
-  type: AppErrorTypes;
-  message: string;
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { prisma } from "./seedConfig";
+&nbsp;
+async function recommendations(){
+    try{
+        console.log("(4/6)===Starting insert recommendations in database===");
+        await prisma.recommendation.createMany({
+            data : [
+                { name :"Metal:Hellsinger - No Tomorrow ft. Serj Tankian from System of a Down", youtubeLink :"https://www.youtube.com/watch?v=CVyPO_tR540", score : 2421},
+                { name :"Post Malone - Take What You Want ft. Ozzy Osbourne, Travis Scott", youtubeLink :"https://www.youtube.com/watch?v=LYa_ReqRlcs", score : 11952},
+                { name :"Project Vela - I'm Sorry", youtubeLink :"https://www.youtube.com/watch?v=HaP8JsVUYyg", score : 77},
+                { name :"Project Vela - You Can't Fix Me", youtubeLink :"https://www.youtube.com/watch?v=P_uPn62oj2s", score : 100},
+                { name :"Dark Signal - Heart Like A Hurricane", youtubeLink :"https://www.youtube.com/watch?v=OyqZMdqgQFU", score : 41},
+                { name :"Void Chapter - A Thousand Cries", youtubeLink :"https://www.youtube.com/watch?v=_9NMSwk-0M0", score : 54},
+                { name :"Ozzy Osbourne - One of Those Days ft. Eric Clapton", youtubeLink :"https://www.youtube.com/watch?v=N7FKAhIVD80", score : 1449},
+                { name :"Ozzy Osbourne - A Thousand Shades ft. Jeff Beck", youtubeLink :"https://www.youtube.com/watch?v=ZNVs-dfFUj0", score : 210},
+                { name :"One Desire - Battlefield of Love", youtubeLink :"https://www.youtube.com/watch?v=_fy7CJTgFe4", score : 121},
+                { name :"One Desire - After You're Gone", youtubeLink :"https://www.youtube.com/watch?v=fquFgJXr48Y", score : 1039},
+                { name :"Blue Sky Theory - For a Friend", youtubeLink :"https://www.youtube.com/watch?v=rWqJmee1nfo", score : -5},
+                { name :"Everrest - Blackout", youtubeLink :"https://www.youtube.com/watch?v=I2aXXbsBb5w", score : 3}
+            ]
+        })
+        console.log("(5/6)===All insertings complete===")
+    } catch(e) {
+<span class="cstat-no" title="statement not covered" >        console.error(e);</span>
+<span class="cstat-no" title="statement not covered" >        process.exit(1);</span>
+    } finally {
+        await prisma.$disconnect();
+    }
 }
 &nbsp;
-export function isAppError(error: object): error is AppError {
-  return (error as AppError).type !== undefined;
-}
-&nbsp;
-export function errorTypeToStatusCode(type: AppErrorTypes) {
-  if (type === "conflict") return 409;
-  if (type === "not_found") return 404;
-  <span class="missing-if-branch" title="if path not taken" >I</span>if (type === "unauthorized") <span class="cstat-no" title="statement not covered" >return 401;</span>
-  if (type === "wrong_schema") return 422;
-<span class="cstat-no" title="statement not covered" >  return 400;</span>
-}
-&nbsp;
-export function conflictError(message?: string): AppError {
-  return { type: "conflict", message: message ?? <span class="branch-1 cbranch-no" title="branch not covered" >"" </span>};
-}
-&nbsp;
-export function notFoundError(message?: string): AppError {
-  return { type: "not_found", message: <span class="branch-0 cbranch-no" title="branch not covered" >message </span>?? "" };
-}
-&nbsp;
-export function <span class="fstat-no" title="function not covered" >unauthorizedError(</span>message?: string): AppError {
-<span class="cstat-no" title="statement not covered" >  return { type: "unauthorized", message: message ?? "" };</span>
-}
-&nbsp;
-export function wrongSchemaError(message?: string): AppError {
-  return { type: "wrong_schema", message: <span class="branch-0 cbranch-no" title="branch not covered" >message </span>?? "" };
-}
-&nbsp;</pre></td></tr></table></pre>
+export default {
+    recommendations
+}</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->
