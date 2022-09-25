@@ -13,7 +13,7 @@ function __createMusic(
     };
 };
 
-async function __getWorstRecommendation(){
+async function __getWorstRecommendationId(){
     const recommendation = await prisma.recommendation.findMany({
         orderBy : { score : "asc"},
         take : 1
@@ -21,9 +21,18 @@ async function __getWorstRecommendation(){
     console.log(recommendation[0])
     console.log(recommendation[0]["id"])
     return recommendation[0]["id"]
+};
+
+async function __getBestRecommendationId(){
+    const recommendation = await prisma.recommendation.findMany({
+        orderBy : { score : "desc"},
+        take : 1
+    });
+    return recommendation[0]["id"]
 }
 
 export default {
     __createMusic,
-    __getWorstRecommendation
+    __getWorstRecommendationId,
+    __getBestRecommendationId
 }

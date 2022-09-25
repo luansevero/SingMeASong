@@ -15,7 +15,7 @@ describe("POST /recommendations", () => {
         const musicData = recommendationFactory.__createMusic("rightLink");
         const response = await agent.post("/recommendations").send(musicData);
         expect(response.status).toBe(409);
-    })
+    });
     it("Link(from body) incorrect link format - StatusCode(422 - Unprocessable Entity) ", async () => {
         const musicData = recommendationFactory.__createMusic("wrongLink");
         const response =  await agent.post("/recommendations").send(musicData);
@@ -29,34 +29,52 @@ describe("POST /recommendations/:id/upvote", () => {
         const response = await agent.post("/recommendations/1/upvote");
         expect(response.status).toBe(200);
 
-    })
+    });
     it("Given a invalid ID - StatusCode(404 - Not found!)", async () => {
         const response = await agent.post("/recommendations/0/upvote");
         expect(response.status).toBe(404);
-    })
+    });
 });
 
 describe("POST /recommendations/:id/downvote", () => {
     it("Given a correct ID - StatusCode(200 - OK!)", async () => {
         const response = await agent.post("/recommendations/1/downvote");
         expect(response.status).toBe(200);
-    })
+    });
     it("Given a incorrect ID - StatusCode(404 - Not found!)", async () => {
         const response = await agent.post("/recommendations/0/downvote");
         expect(response.status).toBe(404);
-    })
+    });
     it("Given a correct ID(StatusCode(200 - OK!)) but the ID is deleted(StatusCode(404 - Not found!))", async () => {
-        const id = await recommendationFactory.__getWorstRecommendation();
+        const id = await recommendationFactory.__getWorstRecommendationId();
         const response = await agent.post(`/recommendations/${id}/downvote`);
         const deletedResponse = await agent.post(`/recommendations/${id}/downvote`);
         expect(response.status).toBe(200);
         expect(deletedResponse.status).toBe(404);
-    })
+    });
 })
 
 describe("GET /recommendations", () => {
-    
+    it("Get the last 10 recommendations - StatusCode(200 - OK!)", async () => {
+        const response = await agent.get(`/recommendations`);
+        expect(response.status).toBe(200);
+        expect(response.body).toBeInstanceOf(Array);
+    });
 })
+
+describe("GET /recommendations/:id", () => {
+    it("Given a valid recommendation id - StatusCode(200 - OK!)", async () => {
+        const id = await recommendationFactory.__getBestRecommendationId();
+        const response = await agent.get(`/recommendations/${id}`);
+        expect(response.status).toBe(200);
+        expect(response.body).toBeInstanceOf(Object);
+    });
+    it("Given a invalid recommendation id - StatusCode(404 - Not found!)", async () => {
+        const response = await agent.get(`/recommendations/0`);
+        expect(response.status).toBe(404);
+    });
+});
+
 
 afterAll( async () => {
     await prisma.$executeRaw`TRUNCATE TABLE "recommendations"`
