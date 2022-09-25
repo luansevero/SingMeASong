@@ -24,6 +24,18 @@ describe("POST /recommendations", () => {
 
 })
 
+describe("POST /recommendations/:id/upvote", () => {
+    it("Given a correct ID - StatusCode(200 - OK!)", async () => {
+        const response = await agent.post("/recommendations/1/upvote");
+        expect(response.status).toBe(200);
+
+    })
+    it("Given a invalid ID - StatusCode(404 - Not found!)", async () => {
+        const response = await agent.post("/recommendations/0/upvote");
+        expect(response.status).toBe(404);
+    })
+})
+
 afterAll( async () => {
     await prisma.$executeRaw`TRUNCATE TABLE "recommendations"`
     await prisma.$disconnect();
