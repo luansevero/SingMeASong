@@ -18,7 +18,7 @@ describe("POST /recommendations", () => {
     });
     it("Link(from body) incorrect link format - StatusCode(422 - Unprocessable Entity) ", async () => {
         const musicData = recommendationFactory.__createRecommendation("wrongLink");
-        const response =  await agent.post("/recommendations").send(musicData);
+        const response = await agent.post("/recommendations").send(musicData);
         expect(response.status).toBe(422);
     });
 
@@ -112,7 +112,7 @@ describe("GET /recommendation/top/:amount", () => {
     });
 })
 
-afterAll( async () => {
+afterAll(async () => {
     await prisma.$executeRaw`TRUNCATE TABLE "recommendations"`
     await prisma.$disconnect();
 })

@@ -11,17 +11,17 @@ beforeEach(async () => {
 });
 
 function spyAndMock(
-    functionName :   
-        | "create" 
-        | "findAll" 
+    functionName:
+        | "create"
+        | "findAll"
         | "find"
         | "findByName"
         | "updateScore"
         | "getAmountByScore"
         | "remove"
     ,
-    value? : any
-){
+    value?: any
+) {
     return jest
         .spyOn(recommendationRepository, functionName)
         .mockResolvedValue(value)
@@ -45,7 +45,7 @@ describe("POST /recommendations", () => {
 
         const { insert } = recommendationService;
 
-        await expect(insert(recommendation)).rejects.toEqual({type: "conflict", message : "Recommendations names must be unique"});
+        await expect(insert(recommendation)).rejects.toEqual({ type: "conflict", message: "Recommendations names must be unique" });
         expect(findByName).toBeCalled();
         expect(create).not.toBeCalled();
     });
@@ -70,7 +70,7 @@ describe("POST /recommendations/:id/upvote", () => {
 
         const { upvote } = recommendationService;
 
-        await expect(upvote(recommendation["id"])).rejects.toEqual({type: "not_found", message: ""});
+        await expect(upvote(recommendation["id"])).rejects.toEqual({ type: "not_found", message: "" });
         expect(find).toBeCalled();
         expect(updateScore).not.toBeCalled();
     });
@@ -96,7 +96,7 @@ describe("POST /recommendations/:id/downvote", () => {
         const find = spyAndMock("find", recommendation);
         const updateScore = spyAndMock("updateScore", {
             ...recommendation,
-            score : -6
+            score: -6
         });
         const remove = spyAndMock("remove");
 
@@ -115,7 +115,7 @@ describe("POST /recommendations/:id/downvote", () => {
 
         const { downvote } = recommendationService;
 
-        await expect(downvote(recommendation["id"])).rejects.toEqual({type: "not_found", message: ""});
+        await expect(downvote(recommendation["id"])).rejects.toEqual({ type: "not_found", message: "" });
         expect(find).toBeCalled();
         expect(updateScore).not.toBeCalled();
         expect(remove).not.toBeCalled();
@@ -146,7 +146,7 @@ describe("GET /recommendations/:id", () => {
         const find = spyAndMock("find", null);
         const { getById } = recommendationService;
 
-        await expect(getById(recommendation["id"])).rejects.toEqual({type: "not_found", message : ""});
+        await expect(getById(recommendation["id"])).rejects.toEqual({ type: "not_found", message: "" });
         expect(find).toBeCalled();
     });
 });
@@ -154,11 +154,11 @@ describe("GET /recommendations/:id", () => {
 describe("GET /recommendations/random", () => {
     it("Should be returning an recommendation with score >=10 | 70% of time ", async () => {
         const recommendations = recommendationFactory.__createManyRecommendantiosn(10);
-        recommendations.map((recommendation : {
+        recommendations.map((recommendation: {
             id: number,
-            name : string,
-            youtubeLink : string,
-            score : number
+            name: string,
+            youtubeLink: string,
+            score: number
         }) => recommendation["score"] = recommendation["score"] * 10);
 
         const math = jest.spyOn(Math, 'random').mockReturnValue(0.3);
@@ -193,7 +193,7 @@ describe("GET /recommendations/random", () => {
         const findAll = spyAndMock("findAll", []);
         const findAll2 = spyAndMock("findAll", []);
         const { getRandom } = recommendationService;
-        expect(getRandom()).rejects.toEqual({type: "not_found", message:""})
+        expect(getRandom()).rejects.toEqual({ type: "not_found", message: "" })
         expect(findAll).toHaveBeenCalled();
         expect(findAll2).toBeCalled();
     })
