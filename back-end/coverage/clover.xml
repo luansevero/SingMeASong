@@ -1,135 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1664123793562" clover="3.2.0">
-  <project timestamp="1664123793562" name="All files">
-    <metrics statements="142" coveredstatements="137" conditionals="29" coveredconditionals="21" methods="36" coveredmethods="35" elements="207" coveredelements="193" complexity="0" loc="142" ncloc="142" packages="10" files="12" classes="12"/>
+<coverage generated="1664208000535" clover="3.2.0">
+  <project timestamp="1664208000535" name="All files">
+    <metrics statements="96" coveredstatements="63" conditionals="28" coveredconditionals="12" methods="30" coveredmethods="14" elements="154" coveredelements="89" complexity="0" loc="96" ncloc="96" packages="6" files="7" classes="7"/>
     <package name="prisma.seed">
-      <metrics statements="11" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <metrics statements="11" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
       <file name="seedConfig.ts" path="/home/luansevero/projetos/projeto21-singmeasong/back-end/prisma/seed/seedConfig.ts">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
       </file>
       <file name="seedInsert.ts" path="/home/luansevero/projetos/projeto21-singmeasong/back-end/prisma/seed/seedInsert.ts">
-        <metrics statements="9" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <metrics statements="9" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="6" count="1" type="stmt"/>
-        <line num="22" count="1" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
         <line num="24" count="0" type="stmt"/>
         <line num="25" count="0" type="stmt"/>
-        <line num="27" count="1" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
         <line num="31" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src">
-      <metrics statements="14" coveredstatements="14" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="app.ts" path="/home/luansevero/projetos/projeto21-singmeasong/back-end/src/app.ts">
-        <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="7" count="1" type="stmt"/>
-        <line num="8" count="1" type="stmt"/>
-        <line num="9" count="1" type="stmt"/>
-        <line num="11" count="1" type="stmt"/>
-        <line num="12" count="1" type="stmt"/>
-        <line num="14" count="1" type="stmt"/>
-      </file>
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="database.ts" path="/home/luansevero/projetos/projeto21-singmeasong/back-end/src/database.ts">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
-      </file>
-    </package>
-    <package name="src.controllers">
-      <metrics statements="25" coveredstatements="25" conditionals="1" coveredconditionals="1" methods="7" coveredmethods="7"/>
-      <file name="recommendationController.ts" path="/home/luansevero/projetos/projeto21-singmeasong/back-end/src/controllers/recommendationController.ts">
-        <metrics statements="25" coveredstatements="25" conditionals="1" coveredconditionals="1" methods="7" coveredmethods="7"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="7" count="3" type="stmt"/>
-        <line num="8" count="3" type="cond" truecount="1" falsecount="0"/>
-        <line num="9" count="1" type="stmt"/>
-        <line num="12" count="2" type="stmt"/>
-        <line num="14" count="1" type="stmt"/>
-        <line num="18" count="2" type="stmt"/>
-        <line num="20" count="2" type="stmt"/>
-        <line num="22" count="1" type="stmt"/>
-        <line num="26" count="4" type="stmt"/>
-        <line num="28" count="4" type="stmt"/>
-        <line num="30" count="2" type="stmt"/>
-        <line num="34" count="2" type="stmt"/>
-        <line num="36" count="1" type="stmt"/>
-        <line num="40" count="1" type="stmt"/>
-        <line num="41" count="1" type="stmt"/>
-        <line num="45" count="3" type="stmt"/>
-        <line num="47" count="3" type="stmt"/>
-        <line num="48" count="3" type="stmt"/>
-        <line num="52" count="2" type="stmt"/>
-        <line num="54" count="2" type="stmt"/>
-        <line num="55" count="1" type="stmt"/>
-        <line num="58" count="1" type="stmt"/>
-      </file>
-    </package>
-    <package name="src.middlewares">
-      <metrics statements="5" coveredstatements="4" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
-      <file name="errorHandlerMiddleware.ts" path="/home/luansevero/projetos/projeto21-singmeasong/back-end/src/middlewares/errorHandlerMiddleware.ts">
-        <metrics statements="5" coveredstatements="4" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="8" count="1" type="stmt"/>
-        <line num="14" count="7" type="cond" truecount="1" falsecount="0"/>
-        <line num="15" count="7" type="stmt"/>
-        <line num="18" count="0" type="stmt"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
       </file>
     </package>
     <package name="src.repositories">
-      <metrics statements="13" coveredstatements="13" conditionals="1" coveredconditionals="1" methods="8" coveredmethods="8"/>
+      <metrics statements="13" coveredstatements="2" conditionals="1" coveredconditionals="0" methods="8" coveredmethods="0"/>
       <file name="recommendationRepository.ts" path="/home/luansevero/projetos/projeto21-singmeasong/back-end/src/repositories/recommendationRepository.ts">
-        <metrics statements="13" coveredstatements="13" conditionals="1" coveredconditionals="1" methods="8" coveredmethods="8"/>
+        <metrics statements="13" coveredstatements="2" conditionals="1" coveredconditionals="0" methods="8" coveredmethods="0"/>
         <line num="2" count="1" type="stmt"/>
-        <line num="6" count="1" type="stmt"/>
-        <line num="17" count="4" type="stmt"/>
-        <line num="19" count="4" type="stmt"/>
-        <line num="27" count="3" type="stmt"/>
-        <line num="36" count="4" type="cond" truecount="1" falsecount="0"/>
-        <line num="38" count="2" type="stmt"/>
-        <line num="40" count="2" type="stmt"/>
-        <line num="46" count="8" type="stmt"/>
-        <line num="52" count="2" type="stmt"/>
-        <line num="58" count="3" type="stmt"/>
-        <line num="67" count="1" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="36" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="46" count="0" type="stmt"/>
+        <line num="52" count="0" type="stmt"/>
+        <line num="58" count="0" type="stmt"/>
+        <line num="67" count="0" type="stmt"/>
         <line num="72" count="1" type="stmt"/>
-      </file>
-    </package>
-    <package name="src.routers">
-      <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="recommendationRouter.ts" path="/home/luansevero/projetos/projeto21-singmeasong/back-end/src/routers/recommendationRouter.ts">
-        <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="6" count="1" type="stmt"/>
-        <line num="7" count="1" type="stmt"/>
-        <line num="8" count="1" type="stmt"/>
-        <line num="9" count="1" type="stmt"/>
-        <line num="10" count="1" type="stmt"/>
-        <line num="11" count="1" type="stmt"/>
-        <line num="12" count="1" type="stmt"/>
-        <line num="14" count="1" type="stmt"/>
-      </file>
-    </package>
-    <package name="src.schemas">
-      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="recommendationsSchemas.ts" path="/home/luansevero/projetos/projeto21-singmeasong/back-end/src/schemas/recommendationsSchemas.ts">
-        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="6" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.services">
@@ -144,70 +62,79 @@
         <line num="14" count="1" type="stmt"/>
         <line num="18" count="2" type="stmt"/>
         <line num="20" count="1" type="stmt"/>
-        <line num="24" count="4" type="stmt"/>
+        <line num="24" count="3" type="stmt"/>
         <line num="26" count="2" type="stmt"/>
         <line num="31" count="2" type="cond" truecount="1" falsecount="0"/>
         <line num="32" count="1" type="stmt"/>
         <line num="37" count="8" type="stmt"/>
         <line num="38" count="8" type="cond" truecount="1" falsecount="0"/>
-        <line num="40" count="4" type="stmt"/>
+        <line num="40" count="5" type="stmt"/>
         <line num="44" count="1" type="stmt"/>
-        <line num="48" count="3" type="stmt"/>
-        <line num="52" count="2" type="stmt"/>
-        <line num="53" count="2" type="stmt"/>
-        <line num="55" count="2" type="stmt"/>
-        <line num="56" count="2" type="cond" truecount="1" falsecount="0"/>
+        <line num="48" count="2" type="stmt"/>
+        <line num="52" count="5" type="stmt"/>
+        <line num="53" count="5" type="stmt"/>
+        <line num="55" count="5" type="stmt"/>
+        <line num="56" count="5" type="cond" truecount="1" falsecount="0"/>
         <line num="57" count="1" type="stmt"/>
-        <line num="60" count="1" type="stmt"/>
-        <line num="61" count="1" type="stmt"/>
-        <line num="65" count="2" type="stmt"/>
-        <line num="70" count="2" type="cond" truecount="1" falsecount="0"/>
-        <line num="71" count="1" type="stmt"/>
+        <line num="60" count="4" type="stmt"/>
+        <line num="61" count="4" type="stmt"/>
+        <line num="65" count="5" type="stmt"/>
+        <line num="70" count="5" type="cond" truecount="1" falsecount="0"/>
+        <line num="71" count="4" type="stmt"/>
         <line num="74" count="1" type="stmt"/>
-        <line num="78" count="2" type="cond" truecount="1" falsecount="0"/>
-        <line num="79" count="1" type="stmt"/>
-        <line num="82" count="1" type="stmt"/>
+        <line num="78" count="5" type="cond" truecount="1" falsecount="0"/>
+        <line num="79" count="2" type="stmt"/>
+        <line num="82" count="3" type="stmt"/>
         <line num="85" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.utils">
-      <metrics statements="16" coveredstatements="14" conditionals="20" coveredconditionals="12" methods="6" coveredmethods="5"/>
+      <metrics statements="16" coveredstatements="8" conditionals="20" coveredconditionals="6" methods="6" coveredmethods="2"/>
       <file name="errorUtils.ts" path="/home/luansevero/projetos/projeto21-singmeasong/back-end/src/utils/errorUtils.ts">
-        <metrics statements="16" coveredstatements="14" conditionals="20" coveredconditionals="12" methods="6" coveredmethods="5"/>
+        <metrics statements="16" coveredstatements="8" conditionals="20" coveredconditionals="6" methods="6" coveredmethods="2"/>
         <line num="7" count="1" type="stmt"/>
-        <line num="8" count="7" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
         <line num="11" count="1" type="stmt"/>
-        <line num="12" count="7" type="cond" truecount="1" falsecount="0"/>
-        <line num="13" count="6" type="cond" truecount="1" falsecount="0"/>
-        <line num="14" count="1" type="cond" truecount="0" falsecount="1"/>
-        <line num="15" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="12" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="13" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="14" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="15" count="0" type="cond" truecount="0" falsecount="1"/>
         <line num="16" count="0" type="stmt"/>
         <line num="19" count="1" type="stmt"/>
         <line num="20" count="1" type="cond" truecount="3" falsecount="1"/>
         <line num="23" count="1" type="stmt"/>
-        <line num="24" count="5" type="cond" truecount="3" falsecount="1"/>
+        <line num="24" count="4" type="cond" truecount="3" falsecount="1"/>
         <line num="27" count="1" type="stmt"/>
         <line num="28" count="0" type="cond" truecount="0" falsecount="4"/>
         <line num="31" count="1" type="stmt"/>
-        <line num="32" count="1" type="cond" truecount="3" falsecount="1"/>
+        <line num="32" count="0" type="cond" truecount="0" falsecount="4"/>
       </file>
     </package>
     <package name="tests.factories">
-      <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+      <metrics statements="21" coveredstatements="14" conditionals="1" coveredconditionals="0" methods="6" coveredmethods="3"/>
       <file name="recommendationFactory.ts" path="/home/luansevero/projetos/projeto21-singmeasong/back-end/tests/factories/recommendationFactory.ts">
-        <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+        <metrics statements="21" coveredstatements="14" conditionals="1" coveredconditionals="0" methods="6" coveredmethods="3"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
-        <line num="7" count="3" type="stmt"/>
-        <line num="11" count="3" type="stmt"/>
-        <line num="18" count="1" type="stmt"/>
-        <line num="22" count="1" type="stmt"/>
-        <line num="23" count="1" type="stmt"/>
-        <line num="24" count="1" type="stmt"/>
-        <line num="28" count="1" type="stmt"/>
-        <line num="32" count="1" type="stmt"/>
-        <line num="36" count="1" type="stmt"/>
-        <line num="39" count="1" type="stmt"/>
+        <line num="7" count="9" type="stmt"/>
+        <line num="11" count="9" type="stmt"/>
+        <line num="18" count="8" type="stmt"/>
+        <line num="19" count="8" type="stmt"/>
+        <line num="27" count="3" type="stmt"/>
+        <line num="28" count="3" type="cond" truecount="0" falsecount="1"/>
+        <line num="29" count="3" type="stmt"/>
+        <line num="30" count="3" type="stmt"/>
+        <line num="31" count="25" type="stmt"/>
+        <line num="37" count="25" type="stmt"/>
+        <line num="39" count="3" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="47" count="0" type="stmt"/>
+        <line num="48" count="0" type="stmt"/>
+        <line num="49" count="0" type="stmt"/>
+        <line num="53" count="0" type="stmt"/>
+        <line num="57" count="0" type="stmt"/>
+        <line num="61" count="0" type="stmt"/>
+        <line num="64" count="1" type="stmt"/>
       </file>
     </package>
   </project>

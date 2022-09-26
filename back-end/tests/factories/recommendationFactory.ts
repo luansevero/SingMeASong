@@ -14,6 +14,31 @@ function __createRecommendation(
     };
 };
 
+function __createRecommendationData(){
+    const recommendation = __createRecommendation("rightLink");
+    return {
+        ...recommendation,
+        id: 1,
+        score: 5
+    }
+}
+
+function __createManyRecommendantiosn(amount : number){
+    let index = amount;
+    if(amount > 10) index = 10;
+    const recommendantions : any = []
+    for(let i = 0; i < amount; i++){
+        const recommendation = {
+            id : i + 1,
+            name : `${i}A${i}B`,
+            youtubeLink: `https>//www.youtube.com/watch?v=${i}1${i+1}A`,
+            score : `${i}`
+        }
+        recommendantions.push(recommendation);
+    }
+    return recommendantions;
+}
+
 async function __getWorstRecommendationId(){
     const recommendation = await prisma.recommendation.findMany({
         orderBy : { score : "asc"},
@@ -40,5 +65,7 @@ export default {
     __createRecommendation,
     __getWorstRecommendationId,
     __getBestRecommendationId,
-    __fillRecommendationTable
+    __fillRecommendationTable,
+    __createRecommendationData,
+    __createManyRecommendantiosn
 }

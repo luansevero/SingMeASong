@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test:int": "NODE_ENV=test npx prisma migrate dev && NODE_ENV=test npx prisma db seed && jest -i --coverage --testPathPattern=tests/integration",
-    "test:unit": "NODE_ENV=test jest -- -i --coverage --testPathPattern=tests/unit",
+    "test:unit": "NODE_ENV=test jest -i --coverage --testPathPattern=tests/unit",
     "build": "tsc && npx prisma generate && npx prisma migrate deploy",
     "start": "node dist/server.js",
     "dev": "NODE_ENV=dev nodemon src/server.ts"
