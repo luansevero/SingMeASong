@@ -1,3 +1,4 @@
+/* eslint-disable */
 import useTopRecommendations from "../../../hooks/api/useTopRecommendations";
 
 import Recommendation from "../../../components/Recommendation";

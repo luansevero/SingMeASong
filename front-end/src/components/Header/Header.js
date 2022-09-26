@@ -1,3 +1,4 @@
+/* eslint-disable */
 import styled from "styled-components";
 import { VscPlayCircle } from "react-icons/vsc";
 

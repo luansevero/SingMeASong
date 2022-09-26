@@ -1,3 +1,4 @@
+/* eslint-disable */
 import styled from "styled-components";
 import { useEffect } from "react";
 
@@ -39,11 +40,11 @@ export default function Recommendation({ name, youtubeLink, score, id, onUpvote 
       <Row data-cy="recommendationName">{name}</Row>
       <ReactPlayer url={youtubeLink} width="100%" height="100%" />
       <Row>
-        <GoArrowUp size="24px" onClick={handleUpvote}  data-cy="ArrowUp"/>
+        <GoArrowUp size="24px" onClick={handleUpvote} data-cy="ArrowUp" />
         <span data-cy="score">
           {score}
         </span>
-        <GoArrowDown size="24px" onClick={handleDownvote} data-cy="ArrowDown"/>
+        <GoArrowDown size="24px" onClick={handleDownvote} data-cy="ArrowDown" />
       </Row>
     </Container>
   );
