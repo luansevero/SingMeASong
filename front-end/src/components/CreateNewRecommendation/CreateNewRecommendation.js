@@ -18,10 +18,10 @@ export default function CreateNewRecommendation({ onCreateNewRecommendation = ()
   
   return (
     <Container>
-      <Input type="text" placeholder="Name" value={name} onChange={e => setName(e.target.value)} disabled={disabled} />
-      <Input type="text" placeholder="https://youtu.be/..." value={link} onChange={e => setLink(e.target.value)} disabled={disabled} />
+      <Input type="text" placeholder="Name" value={name} onChange={e => setName(e.target.value)} disabled={disabled} data-cy="name"/>
+      <Input type="text" placeholder="https://youtu.be/..." value={link} onChange={e => setLink(e.target.value)} disabled={disabled} data-cy="youtubeLink"/>
       <Button onClick={() => handleCreateRecommendation()} disabled={disabled}>
-        <IoReturnUpForwardOutline size="24px" color="#fff" />
+        <IoReturnUpForwardOutline size="24px" color="#fff" data-cy="create"/>
       </Button>
     </Container>
   );
