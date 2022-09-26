@@ -1,51 +1,18 @@
 import testRepository from "../repositories/testRepository";
 function recommendations(){
     const data = [
-        {
-            name: "Dragon Slayer - NSP",
-            youtubeLink: "https://www.youtube.com/watch?v=5PcjdJz61VI",
-            score: 8
-        },
-        {
-            name: "Dinosaur Laser Fight - NSP",
-            youtubeLink: "https://www.youtube.com/watch?v=dGh0tE9HsYM",
-            score: 3
-        },
-        {
-            name: "It's Bedtime - NSP",
-            youtubeLink: "https://www.youtube.com/watch?v=MjPIbxFJdwg",
-            score: 6
-        },
-        {
-            name: "Thunder & Lightning - NSP",
-            youtubeLink: "https://www.youtube.com/watch?v=-rSGoP5iGZQ",
-            score: 12
-        },
-        {
-            name: "6969 - NSP",
-            youtubeLink: "https://www.youtube.com/watch?v=PvLz5kCVIss",
-            score: 6
-        },
-        {
-            name: "Cool Patrol - NSP",
-            youtubeLink: "https://www.youtube.com/watch?v=-tW0G9XWaj0",
-            score: 10
-        },
-        {
-            name: "Danny Don't You Know - NSP",
-            youtubeLink: "https://www.youtube.com/watch?v=kT8cX2-_7pQ",
-            score: 0
-        },
-        {
-            name: "First Date - NSP",
-            youtubeLink: "https://www.youtube.com/watch?v=UvgcLTzwjVM",
-            score: 5
-        },
-        {
-            name: "If We Were Gay - NSP",
-            youtubeLink: "https://www.youtube.com/watch?v=f99njZJod2c",
-            score: 20
-        }
+        { name :"Metal:Hellsinger - No Tomorrow ft. Serj Tankian from System of a Down", youtubeLink :"https://www.youtube.com/watch?v=CVyPO_tR540", score : 2421},
+        { name :"Post Malone - Take What You Want ft. Ozzy Osbourne, Travis Scott", youtubeLink :"https://www.youtube.com/watch?v=LYa_ReqRlcs", score : 11952},
+        { name :"Project Vela - I'm Sorry", youtubeLink :"https://www.youtube.com/watch?v=HaP8JsVUYyg", score : 77},
+        { name :"Project Vela - You Can't Fix Me", youtubeLink :"https://www.youtube.com/watch?v=P_uPn62oj2s", score : 100},
+        { name :"Dark Signal - Heart Like A Hurricane", youtubeLink :"https://www.youtube.com/watch?v=OyqZMdqgQFU", score : 41},
+        { name :"Void Chapter - A Thousand Cries", youtubeLink :"https://www.youtube.com/watch?v=_9NMSwk-0M0", score : 54},
+        { name :"Ozzy Osbourne - One of Those Days ft. Eric Clapton", youtubeLink :"https://www.youtube.com/watch?v=N7FKAhIVD80", score : 1449},
+        { name :"Ozzy Osbourne - A Thousand Shades ft. Jeff Beck", youtubeLink :"https://www.youtube.com/watch?v=ZNVs-dfFUj0", score : 210},
+        { name :"One Desire - Battlefield of Love", youtubeLink :"https://www.youtube.com/watch?v=_fy7CJTgFe4", score : 121},
+        { name :"One Desire - After You're Gone", youtubeLink :"https://www.youtube.com/watch?v=fquFgJXr48Y", score : 1039},
+        { name :"Blue Sky Theory - For a Friend", youtubeLink :"https://www.youtube.com/watch?v=rWqJmee1nfo", score : -5},
+        { name :"Everrest - Blackout", youtubeLink :"https://www.youtube.com/watch?v=I2aXXbsBb5w", score : 3}
     ];
 
     return data
