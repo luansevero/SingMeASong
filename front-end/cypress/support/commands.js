@@ -23,3 +23,9 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+Cypress.Commands.add("resetData", () => {
+    cy.request("GET", "http://localhost:5000/test/reset");
+});
+Cypress.Commands.add("insertData", () => {
+    cy.request("GET", "http://localhost:5000/test/insert");
+});
