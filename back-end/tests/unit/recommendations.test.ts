@@ -137,7 +137,9 @@ describe("GET /recommendations/:id", () => {
         const find = spyAndMock("find", recommendation);
         const { getById } = recommendationService;
         await expect(getById(recommendation["id"])).resolves.not.toThrow();
+        const expectRecommendation = await getById(recommendation["id"]);
         expect(find).toBeCalled();
+        expect(expectRecommendation).toEqual(recommendation);
     });
     it("Should not showing the recommendation", async () => {
         const recommendation = recommendationFactory.__createRecommendationData();
@@ -150,21 +152,50 @@ describe("GET /recommendations/:id", () => {
 });
 
 describe("GET /recommendations/random", () => {
-    // it("Should be returning an recommendation with score > 10 | 70% of time", async () => {
-    //     const randomNumber = Math.random();
-        // const math = jest.spyOn(Math, "random").mockResolvedValueOnce(0.7);
-    // });
-    // it("Should be returning an recommendation between -5 and 10 | 30% of time", async () => {
+    it("Should be returning an recommendation with score >=10 | 70% of time ", async () => {
+        const recommendations = recommendationFactory.__createManyRecommendantiosn(10);
+        recommendations.map((recommendation : {
+            id: number,
+            name : string,
+            youtubeLink : string,
+            score : number
+        }) => recommendation["score"] = recommendation["score"] * 10);
 
-    // });
-    // it("IF(Only have recommendations with score > 10 our scorce <=10) Should be returning any recommendation", async () => {
+        const math = jest.spyOn(Math, 'random').mockReturnValue(0.3);
+        const findAll = spyAndMock("findAll", recommendations);
 
-    // });
+        const { getRandom } = recommendationService;
+
+        const expectRecommendation = await getRandom();
+
+        await expect(getRandom()).resolves.not.toThrow();
+        expect(recommendations).toContain(expectRecommendation);
+        expect(Number(expectRecommendation["score"])).toBeGreaterThanOrEqual(10);
+        expect(math).toBeCalled();
+        expect(findAll).toHaveBeenCalledTimes(2);
+    });
+    it("Should be returning an recommendation between -5 and 10 | 30% of time", async () => {
+        const recommendations = recommendationFactory.__createManyRecommendantiosn(10);
+        const { getRandom } = recommendationService;
+
+        const math = jest.spyOn(Math, 'random').mockReturnValue(0.8);
+        const findAll = spyAndMock("findAll", recommendations);
+
+        const expectRecommendation = await getRandom();
+
+        await expect(getRandom()).resolves.not.toThrow();
+        expect(recommendations).toContain(expectRecommendation);
+        expect(Number(expectRecommendation["score"])).toBeLessThanOrEqual(10);
+        expect(math).toBeCalled();
+        expect(findAll).toBeCalled();
+    });
     it("Should not returning any recommendations", async () => {
         const findAll = spyAndMock("findAll", []);
+        const findAll2 = spyAndMock("findAll", []);
         const { getRandom } = recommendationService;
         expect(getRandom()).rejects.toEqual({type: "not_found", message:""})
-        expect(findAll).toBeCalled();
+        expect(findAll).toHaveBeenCalled();
+        expect(findAll2).toBeCalled();
     })
 });
 
