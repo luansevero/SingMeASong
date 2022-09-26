@@ -2,7 +2,6 @@ import { prisma } from "./seedConfig";
 
 async function recommendations(){
     try{
-        console.log("(4/6)===Starting insert recommendations in database===");
         await prisma.recommendation.createMany({
             data : [
                 { name :"Metal:Hellsinger - No Tomorrow ft. Serj Tankian from System of a Down", youtubeLink :"https://www.youtube.com/watch?v=CVyPO_tR540", score : 2421},
@@ -18,8 +17,7 @@ async function recommendations(){
                 { name :"Blue Sky Theory - For a Friend", youtubeLink :"https://www.youtube.com/watch?v=rWqJmee1nfo", score : -5},
                 { name :"Everrest - Blackout", youtubeLink :"https://www.youtube.com/watch?v=I2aXXbsBb5w", score : 3}
             ]
-        })
-        console.log("(5/6)===All insertings complete===")
+        });
     } catch(e) {
         console.error(e);
         process.exit(1);
