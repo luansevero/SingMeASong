@@ -1,3 +1,7 @@
+before(() => {
+  cy.insertData();
+});
+
 beforeEach(() => {
   cy.visit("/");
 })
@@ -13,3 +17,6 @@ describe('GET /recommendations/top', () => {
   });
 });
 
+after(() => {
+  cy.resetData();
+});
