@@ -6,7 +6,7 @@ async function insertMany (data : any){
 }
 
 async function deleteAll (){
-    await prisma.recommendation.deleteMany({})
+    await prisma.$executeRaw`TRUNCATE TABLE recommendations RESTART IDENTITY CASCADE;`;
     return
 }
 
